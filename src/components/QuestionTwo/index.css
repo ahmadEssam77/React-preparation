@@ -1,0 +1,9 @@
+.counter-display, .name-display {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-wraper {
+    text-align: center;
+}
