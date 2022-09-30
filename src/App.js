@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Layout from './components/Layout';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import QuestionOne from './components/QuestionOne';
+import QuestionTwo from './components/QuestionTwo';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+            <Layout />
+        <Routes>
+            <Route exact path="/1" element={<QuestionOne />} />
+            <Route exact path="/2" element={<QuestionTwo />} />
+        </Routes>
+
+        {/* <Link to="/">Home</Link>
+        <Link to="/about">About</Link> */}
+      </Router>
     </div>
   );
 }

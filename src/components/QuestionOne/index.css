@@ -1,0 +1,18 @@
+button {
+    cursor: pointer;
+}
+
+.display-users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.user-wrapper {
+    width: 30%;
+    border: 1px solid;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
