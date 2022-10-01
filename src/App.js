@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import QuestionOne from './components/QuestionOne';
 import QuestionTwo from './components/QuestionTwo';
 import QuestionThree from './components/QuestionThree';
+import QuestionFour from './components/QuestionFour';
+import QuestionFive from './components/QuestionFive';
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
             <Route exact path="/1" element={<QuestionOne />} />
             <Route exact path="/2" element={<QuestionTwo />} />
             <Route exact path="/3" element={<QuestionThree />} />
+            <Route exact path="/4" element={<QuestionFour />} />
+            <Route exact path="/5" element={<QuestionFive />} />
         </Routes>
 
         {/* <Link to="/">Home</Link>

@@ -33,14 +33,17 @@ const QuestionOne = () => {
             <h2>Question One : using map and filter</h2>
             <button onClick={getUsers}>Get users</button>
             <h2>Users</h2>
-            <div className='display-users'>
-                {myUsersArr.map( (user, index) => (
-                    <div className='user-wrapper' key={index}>
-                        <p>{user.name}</p>
-                        <p>{user.username}</p>
-                    </div>
-                ))}
-            </div>
+            {
+                myUsersArr.length === 0 ? <p><strong>No users yet</strong></p> :
+                <div className='display-users'>
+                    {myUsersArr.map( (user, index) => (
+                        <div className='user-wrapper' key={index}>
+                            <p>{user.name}</p>
+                            <p>{user.username}</p>
+                        </div>
+                    ))}
+                </div>
+            }
             <button onClick={filteredUsers}>Filter Users</button>
         </>
     );
