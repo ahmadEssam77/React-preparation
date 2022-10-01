@@ -13,9 +13,7 @@ const QuestionOne = () => {
     // }
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(data => setMyUsersArr(data))
+        getUsers();
     }, []);
 
     const getUsers = () => {

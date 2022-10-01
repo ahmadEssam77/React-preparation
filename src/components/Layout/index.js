@@ -15,7 +15,6 @@ const Layout = () => {
                     <Link to={`/${number}`} key={index} className='number'>{number}</Link>
                 ))}
             </div>
-            {/* <QuestionOne /> */}
         </>
     );
 }
