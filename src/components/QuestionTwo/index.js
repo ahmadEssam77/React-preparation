@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import QuestionThree from '../QuestionThree';
 import './index.css';
 
 const QuestionTwo = () => {
@@ -8,6 +9,10 @@ const QuestionTwo = () => {
 
     const incrementCounter = () => {
         setCounter(counter + 1);
+    }
+
+    const decrementCounter = () => {
+        setCounter(counter +- 1);
     }
 
     const resetCounter = () => {
@@ -31,14 +36,17 @@ const QuestionTwo = () => {
             <h3>Counter Example: </h3>
             <p className='counter-display'>{counter}</p>
             <div className='button-wraper'>    
-                <button onClick={incrementCounter}>Increment</button>
+                <button onClick={decrementCounter}>Decrement</button>
                 <button onClick={resetCounter}>Reset counter</button>
+                <button onClick={incrementCounter}>Increment</button>
             </div>
             <p className='name-display'>{name}</p>
             <div className='button-wraper'>    
-                <button onClick={myName}>Change Name</button>
+                <button onClick={myName}>My name is ..</button>
                 <button onClick={sayMyName}>Say My Name</button>
             </div>
+            <hr />
+            <QuestionThree name={name} myName={myName} sayMyName={sayMyName} />
         </>
     )
 }
